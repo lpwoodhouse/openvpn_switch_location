@@ -4,4 +4,16 @@
 - name: stop openvpn service
   service:
     name: "{{ service }}"
+    enabled: true
     state: stopped
+
+- name: copy new location configuration template
+  template:
+    src: client.conf.j2
+    dest: "{{ config_file }}"
+    owner: root
+    group: root
+    mode: 0755
+    force: yes
+  notify:
+    - restart openvpn service
