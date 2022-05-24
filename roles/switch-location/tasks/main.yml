@@ -1,0 +1,7 @@
+---
+# main tasks for switch-location role
+
+- name: stop openvpn service
+  service:
+    name: "{{ service }}"
+    state: stopped
