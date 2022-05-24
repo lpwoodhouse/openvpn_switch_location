@@ -23,7 +23,7 @@
 
 # wait for new vpn connection to establish
 - pause:
-    seconds: 30
+    seconds: 15
     prompt: wait for new connection to establish
 
 - name: get new ip infomation
