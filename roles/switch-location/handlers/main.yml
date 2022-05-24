@@ -1,6 +1,0 @@
----
-# handlers for switch-location role
-- name: restart openvpn service
-  service:
-    name: "{{ service }}"
-    state: restarted
