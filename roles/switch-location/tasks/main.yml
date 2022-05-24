@@ -3,8 +3,8 @@
 
 - name: get current ip infomation
   shell: >
-    curl ifconfig.io/ip \
-    curl ifconfig.io/country_code
+    curl ifconfig.io/country_code \
+    curl ifconfig.io/ip
   register: ipinfo_initial
 
 - name: copy new location configuration template
@@ -23,12 +23,13 @@
 
 # wait for new vpn connection to establish
 - pause:
-    seconds: 15
+    seconds: 30
+    prompt: wait for new connection to establish
 
 - name: get new ip infomation
   shell: >
-    curl ifconfig.io/ip \
-    curl ifconfig.io/country_code
+    curl ifconfig.io/country_code \
+    curl ifconfig.io/ip
   register: ipinfo_new
 
 - debug:
