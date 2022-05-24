@@ -1,11 +1,11 @@
 ---
 # main tasks for switch-location role
 
-- name: stop openvpn service
-  service:
-    name: "{{ service }}"
-    enabled: true
-    state: stopped
+- name: get current ip infomation
+  shell: >
+    curl ifconfig.io/ip \
+    curl ifconfig.io/country_code
+  register: ipinfo_initial
 
 - name: copy new location configuration template
   template:
@@ -15,5 +15,25 @@
     group: root
     mode: 0755
     force: yes
-  notify:
-    - restart openvpn service
+
+- name: restart openvpn service
+  service:
+    name: "{{ service }}"
+    state: restarted
+
+# wait for new vpn connection to establish
+- pause:
+    seconds: 15
+
+- name: get new ip infomation
+  shell: >
+    curl ifconfig.io/ip \
+    curl ifconfig.io/country_code
+  register: ipinfo_new
+
+- debug:
+    msg: 
+      - "Initial Connection:"
+      - "{{ ipinfo_initial.stdout_lines }}"
+      - "New Connection:"
+      - "{{ ipinfo_new.stdout_lines }}"
