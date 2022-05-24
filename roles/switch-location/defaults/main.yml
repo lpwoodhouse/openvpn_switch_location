@@ -1,0 +1,8 @@
+---
+# default variables for switch-location role
+
+# openvpn client service variable
+service: openvpn-client@client
+
+# location variable e.g. uk-london, india-mumbai-1, usa-seattle, usa-newyork, switzerland
+location: usa-sanfrancisco
