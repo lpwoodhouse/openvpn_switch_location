@@ -7,7 +7,7 @@ service: openvpn-client@client
 # path to openvpn config
 config_file: /etc/openvpn/client/client.conf
 
-# location variable e.g. uk-london, india-mumbai-1, usa-seattle, usa-newyork, switzerland
+# location variable
 location: usa-sanfrancisco
 #location: usa-newyork
 #location: usa-seattle
