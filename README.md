@@ -12,9 +12,9 @@ None
 
 Available variables are listed below, along with default values (see ```defaults/main.yml```)
 ```shell
-variable1:
-variable2:
-...etc
+service: openvpn-client@client
+config_file: /etc/openvpn/client/client.conf
+location: usa-sanfrancisco
 ```
 ## Dependencies
 
