@@ -1,4 +1,5 @@
 ---
+# main task for role execution
 - name: configure inventory hosts
   hosts: localhost
   gather_facts: no
