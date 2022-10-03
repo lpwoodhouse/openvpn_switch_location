@@ -24,4 +24,4 @@
   
   - name: switch location
     include_role:
-      name: switch-location
+      name: switch_location

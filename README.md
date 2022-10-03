@@ -2,7 +2,7 @@
 
 ### <sub-heading>
 
-Role tailored to my homelab environment for switching ExpressVPN connection location on linux openvpn client
+This play is for switching ExpressVPN connection locations configured on the linux openvpn client
 
 ## Requirements
 
@@ -12,9 +12,11 @@ None
 
 Available variables are listed below, along with default values (see ```defaults/main.yml```)
 ```shell
-service: openvpn-client@client
-config_file: /etc/openvpn/client/client.conf
-location: usa-sanfrancisco
+service: openvpn-client@client #openvpn@client on debian based distros
+config_file: /etc/openvpn/client/client.conf #/etc/openvpn/client.conf on debian based distros
+
+location: <expressvpn_connection_location>
+# location examples include: usa-sanfrancisco, usa-washingtondc, usa-denver, canada-montreal, uk-london, switzerland, hongkong-1, india-sg, malaysia
 ```
 ## Dependencies
 
@@ -24,7 +26,7 @@ None
 ```yaml
     - hosts: all
       roles:
-        - <role name>
+        - switch_location
 ```
 
 ## License
