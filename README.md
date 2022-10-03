@@ -1,4 +1,4 @@
-# Ansible Role: switch-location
+# Ansible play: switch_location
 
 ### <sub-heading>
 
