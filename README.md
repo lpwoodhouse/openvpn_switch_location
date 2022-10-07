@@ -1,6 +1,9 @@
-# Ansible play: switch_location
+# Ansible playbook: openvpn_switch_location
+![GitHub last commit](https://img.shields.io/github/last-commit/lpwoodhouse/playbook_openvpn_switch_location)
+![GitHub repo file count](https://img.shields.io/github/directory-file-count/lpwoodhouse/playbook_openvpn_switch_location)
+![GitHub top language](https://img.shields.io/github/languages/top/lpwoodhouse/playbook_openvpn_switch_location)
 
-### <sub-heading>
+## Purpose
 
 This play is for switching ExpressVPN connection locations configured on the linux openvpn client
 
@@ -31,8 +34,8 @@ None
 
 ## License
 
-MIT
+[![GitHub](https://img.shields.io/github/license/lpwoodhouse/playbook_openvpn_switch_location)](LICENSE)
 
 ## Author Information
 
-This role was created in 2022 by [Lee Woodhouse](https://www.leewoodhouse.com/)
+This playbook was created in 2022 by [Lee Woodhouse](https://www.leewoodhouse.com/)
